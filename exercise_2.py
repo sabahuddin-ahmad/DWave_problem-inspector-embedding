@@ -26,6 +26,8 @@ except ImportError:
     matplotlib.use("agg")
     import matplotlib.pyplot as plt
 
+import dwave.inspector
+
 # ------- Set up our graph -------
 
 # Create empty graph
@@ -64,6 +66,8 @@ response = sampler.sample_qubo(Q,
 
 print("\nSampleset:")
 print(response)
+
+dwave.inspector.show(response)
 
 # ------- Print results to user -------
 print("\nSolutions:")

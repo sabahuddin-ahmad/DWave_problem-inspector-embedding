@@ -25,6 +25,8 @@ except ImportError:
     matplotlib.use("agg")
     import matplotlib.pyplot as plt
 
+import dwave.inspector
+
 # ------- Set up our graph -------
 
 # Create empty graph
@@ -61,6 +63,8 @@ print("\nEmbedding found:\n", sampleset.info['embedding_context']['embedding'])
 
 print("\nSampleset:")
 print(sampleset)
+
+dwave.inspector.show(sampleset)
 
 # ------- Print results to user -------
 print("\nSolutions:")
